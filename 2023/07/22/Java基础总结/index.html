@@ -1,0 +1,364 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Java基础总结 | GodHandl</title><meta name="author" content="GodHandl"><meta name="copyright" content="GodHandl"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="标识符和关键字的区别：标识符用来命名常量、变量、类和类的对象等。 因此，一个良好的编程习惯要求命名标识符时，应赋予它一个有意义或有用途的名字。 关键字（或者保留字）是对编译器有特殊意义的固定单词，不能在程序中做其他目的使用。 一、主体不同 关键字属于保留字，是整个语言范围内预先保留的标识符。一般标识符是用户编程时使用的名字，用于给变量、常量、函数、语句块等命名，以建立起名称与使用之间的关系。 二、">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java基础总结">
+<meta property="og:url" content="http://example.com/2023/07/22/Java%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="GodHandl">
+<meta property="og:description" content="标识符和关键字的区别：标识符用来命名常量、变量、类和类的对象等。 因此，一个良好的编程习惯要求命名标识符时，应赋予它一个有意义或有用途的名字。 关键字（或者保留字）是对编译器有特殊意义的固定单词，不能在程序中做其他目的使用。 一、主体不同 关键字属于保留字，是整个语言范围内预先保留的标识符。一般标识符是用户编程时使用的名字，用于给变量、常量、函数、语句块等命名，以建立起名称与使用之间的关系。 二、">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/6.jpg">
+<meta property="article:published_time" content="2023-07-22T12:04:36.000Z">
+<meta property="article:modified_time" content="2023-07-30T01:32:31.538Z">
+<meta property="article:author" content="GodHandl">
+<meta property="article:tag" content="java">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/6.jpg"><link rel="shortcut icon" href="/img/favicon1.png"><link rel="canonical" href="http://example.com/2023/07/22/Java%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Java基础总结',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-07-30 09:32:31'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/my.css"><meta name="generator" content="Hexo 5.4.2"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load',() => { preloader.endLoading() })
+
+  if (false) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+  }
+})()</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 目录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/6.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="GodHandl"><span class="site-name">GodHandl</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 目录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Java基础总结</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-22T12:04:36.000Z" title="发表于 2023-07-22 20:04:36">2023-07-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-07-30T01:32:31.538Z" title="更新于 2023-07-30 09:32:31">2023-07-30</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Java/">Java</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Java基础总结"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h4 id="标识符和关键字的区别："><a href="#标识符和关键字的区别：" class="headerlink" title="标识符和关键字的区别："></a>标识符和关键字的区别：</h4><p><strong>标识</strong>符用来命名常量、变量、类和类的对象等。 因此，一个良好的编程习惯要求命名标识符时，应赋予它一个有意义或有用途的名字。 关键字（或者保留字）是对编译器有特殊意义的固定单词，不能在程序中做其他目的使用。</p>
+<p><strong>一、主体不同</strong></p>
+<p><strong>关键字</strong>属于保留字，是整个语言范围内预先保留的标识符。<strong>一般标识符</strong>是用户编程时使用的名字，用于给变量、常量、函数、语句块等命名，以建立起名称与使用之间的关系。</p>
+<p><strong>二、特点不同</strong></p>
+<p><strong>关键字</strong>不能声明与关键字同名的标识符。<strong>一般标识符</strong>由字母和数字以及其它字符构成。</p>
+<p><strong>三、规则不同</strong></p>
+<p><strong>关键字</strong>经过预处理后，关键字从预处理记号(preprocessing-token)中区别出来，剩下的标识符作为记号(token)，用于声明对象、函数、类型、命名空间等。一般标识符长度是由机器上的编译系统决定的，一般的限制为8字符。</p>
+<h4 id="泛型类型擦除："><a href="#泛型类型擦除：" class="headerlink" title="泛型类型擦除："></a>泛型类型擦除：</h4><p>Java的泛型是伪泛型，因为Java在编译期间泛型的信息会被擦除掉，Java的泛型是在编译器这个层次实现的，在生成字节码中不包含泛型中的类型信息，使用泛型的时候加上类型参数，在编译期会去掉，这个过程就是类型擦除</p>
+<p>例如在反射中调用List<Integer>时能添加String和其他类型的数据</p>
+<p>泛型限定使用指定的类型会在编译期进行检查</p>
+<p>类型检查是针对引用的</p>
+<h4 id="Java基本数据类型与封装类的区别："><a href="#Java基本数据类型与封装类的区别：" class="headerlink" title="Java基本数据类型与封装类的区别："></a>Java基本数据类型与封装类的区别：</h4><p>1.值的传递不同 基本的是值传递 封装的是引用传递</p>
+<p>2.存放位置不同 基本的是存放在栈中 封装的在堆中</p>
+<p>3.初始值不同 int &#x3D; 0 Integer&#x3D;null</p>
+<p>4.集合中添加元素引用数据类型</p>
+<p>5.赋值的前提不同 基本的直接实例化赋值 封装的需要申请内存空间赋值</p>
+<h5 id="静态方法的特殊性："><a href="#静态方法的特殊性：" class="headerlink" title="静态方法的特殊性："></a>静态方法的特殊性：</h5><p>内存空间固定，更省资源。实例化对象调用方法需要开辟新的内存空间</p>
+<p>静态方法属于类所有，类实例化前即可使用</p>
+<p>静态方法只能访问类中的静态成员（非静态方法可以访问类中的任何成员）</p>
+<p>因为静态方法在类实例化前就可以使用，而类中的非静态变量必须在实例化之后才能分配内存</p>
+<p>static方法中不能使用this等关键字，因为它属于整个类</p>
+<p>静态方法效率上要比实例化高，静态方法的缺点是不自动进行销毁，而实例化的则可以做销毁</p>
+<p>静态方法和静态变量创建后始终使用同一块内存，而使用实例的方式会创建多个内存</p>
+<p>静态方法可以通过”类名.方法名”直接调用</p>
+<h4 id="成员变量和局部变量的区别："><a href="#成员变量和局部变量的区别：" class="headerlink" title="成员变量和局部变量的区别："></a>成员变量和局部变量的区别：</h4><p>1.类中的位置不同</p>
+<p>成员变量在类方法的外面</p>
+<p>局部变量：在方法或代码块种，或在方法的声明上</p>
+<p>2.在内存的位置不同</p>
+<p>成员在堆中局部在栈中</p>
+<p>3.生命周期不同</p>
+<p>成员随对象的创建而存在，和对象一起消失</p>
+<p>局部随方法的调用而存在，随方法的调用而完毕</p>
+<h2 id="为什么说-Java-语言“编译与解释并存”？"><a href="#为什么说-Java-语言“编译与解释并存”？" class="headerlink" title="为什么说 Java 语言“编译与解释并存”？"></a>为什么说 Java 语言“编译与解释并存”？</h2><ul>
+<li><strong>编译型</strong> ：编译型语言 会通过编译器将源代码一次性翻译成可被该平台执行的机器码。一般情况下，编译语言的执行速度比较快，开发效率比较低。常见的编译性语言有 C、C++、Go、Rust 等等。</li>
+<li><strong>解释型</strong> ：解释型语言会通过解释器一句一句的将代码解释（interpret）为机器代码后再执行。解释型语言开发效率比较快，执行速度比较慢。常见的解释性语言有 Python、JavaScript、PHP 等等。</li>
+<li>这是因为 Java 语言既具有编译型语言的特征，也具有解释型语言的特征。因为 Java 程序要经过先编译，后解释两个步骤，由 Java 编写的程序需要先经过编译步骤，生成字节码（<code>.class</code> 文件），这种字节码必须由 Java 解释器来解释执行。</li>
+</ul>
+<h5 id="面向对象："><a href="#面向对象：" class="headerlink" title="面向对象："></a>面向对象：</h5><h6 id="三大特性："><a href="#三大特性：" class="headerlink" title="三大特性："></a>三大特性：</h6><p><strong>封装</strong><br>封装是把客观事物抽象成类，并且把自己的属性和方法让可信的类或对象操作，对不可性的隐藏。</p>
+<p><strong>继承</strong><br>继承是指这样一种能力：它可以使用现有类的所有功能，并在无需重新编写原来的类的情况下对这些功能进行扩展。</p>
+<p>继承得到的新类称为“子类”或“派生类”。被继承的父类称为“基类”、“父类”或“超类”。<br>继承的过程是一个从一般到特殊的的过程。<br>继承概念的实现方式有二类：实现继承与接口继承。实现继承是指直接使用基类的属性和方法而无需额外编码的能力；接口继承是指仅使用属性和方法的名称、但是子类必须提供实现的能力；<br>java的访问权限</p>
+<p>继承与接口与抽象类</p>
+<p>接口可以继承接口，但用extends 而不是implement。<br>接口不能继承抽象类，抽象类可以实现（implement）接口。原因是接口的实现和抽象类的继承都要重写父类的抽象方法。而接口里只能有抽象方法，抽象类里则允许有抽象方法和非抽象方法。<br>抽象类可以继承实体类。<br><strong>多态</strong><br>多态性（polymorphism）是允许你将父对象设置成为和一个或更多的他的子对象相等的技术，赋值之后，父对象就可以根据当前赋值给它的子对象的特性以不同的方式运作。这就意味着虽然针对不同对象的具体操作不同，但通过一个公共的类，它们（那些操作）可以通过相同的方式予以调用</p>
+<p>实现多态，有二种方式，覆盖，重载。<br>覆盖，是指<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%AD%90%E7%B1%BB&spm=1001.2101.3001.7020">子类</a>重新定义父类的虚函数的做法。<br>重载，是指允许存在多个同名函数，而这些函数的参数表不同（或许参数个数不同，或许参数类型不同，或许两者都不同）。</p>
+<h6 id="构造方法的作用和特点："><a href="#构造方法的作用和特点：" class="headerlink" title="构造方法的作用和特点："></a>构造方法的作用和特点：</h6><p>构造方法的特点</p>
+<p>1、构造方法名一定与类同名</p>
+<p>2、构造方法无返回值类型（void 也不行）</p>
+<p>3、构造方法可以没有（默认一个无参构造方法），也可以有多个构造方法，他们之间构成重载关系</p>
+<p>4、如果定义有参构造函数，则无参构造函数将被自动屏蔽</p>
+<p>5、构造方法不能被继承</p>
+<p>6、构造方法不能手动调用，在创建类实例的时候自动调用构造方法</p>
+<p>构造方法的作用与使用场合</p>
+<p>1、当我们创建类实例时，就想给他的私有字段赋初值</p>
+<p>2、简化我们为类字段赋值的代码</p>
+<h5 id="反射："><a href="#反射：" class="headerlink" title="反射："></a>反射：</h5><h6 id="什么是反射？"><a href="#什么是反射？" class="headerlink" title="什么是反射？"></a>什么是反射？</h6><p>反射是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法和属性；这种动态获取的信息以及动态调用对象的方法的功能称为 Java 语言的反射机制。</p>
+<h6 id="哪里用到反射机制？"><a href="#哪里用到反射机制？" class="headerlink" title="哪里用到反射机制？"></a>哪里用到反射机制？</h6><p>  JDBC中，利用反射动态加载了数据库驱动程序。<br>  Web服务器中利用反射调用了Sevlet的服务方法。<br>  Eclispe等开发工具利用反射动态刨析对象的类型与结构，动态提示对象的属性和方法。<br>  很多框架都用到反射机制，注入属性，调用方法，如Spring。</p>
+<h6 id="反射机制的优缺点？"><a href="#反射机制的优缺点？" class="headerlink" title="反射机制的优缺点？"></a>反射机制的优缺点？</h6><p>  优点：可以动态执行，在运行期间根据业务功能动态执行方法、访问属性，最大限度发挥了java的灵活性。<br>  缺点：对性能有影响，这类操作总是慢于直接执行java代码。</p>
+<h6 id="动态代理是什么？有哪些应用？"><a href="#动态代理是什么？有哪些应用？" class="headerlink" title="动态代理是什么？有哪些应用？"></a>动态代理是什么？有哪些应用？</h6><p>  动态代理是运行时动态生成代理类。<br>  动态代理的应用有 Spring AOP数据查询、测试框架的后端 mock、rpc，Java注解对象获取等。</p>
+<h6 id="怎么实现动态代理？"><a href="#怎么实现动态代理？" class="headerlink" title="怎么实现动态代理？"></a>怎么实现动态代理？</h6><p>  JDK 原生动态代理和 cglib 动态代理。<br>  JDK 原生动态代理是基于接口实现的，而 cglib 是基于继承当前类的子类实现的。</p>
+<ol start="7">
+<li><h6 id="Java反射机制的作用"><a href="#Java反射机制的作用" class="headerlink" title="Java反射机制的作用"></a>Java反射机制的作用</h6></li>
+</ol>
+<p>  在运行时判断任意一个对象所属的类<br>  在运行时构造任意一个类的对象<br>  在运行时判断任意一个类所具有的成员变量和方法<br>  在运行时调用任意一个对象的方法</p>
+<h4 id="Java-反射机制的优缺点"><a href="#Java-反射机制的优缺点" class="headerlink" title="Java 反射机制的优缺点"></a>Java 反射机制的优缺点</h4><p>优点：</p>
+<ul>
+<li>能够运行时动态获取类的实例，大大提高系统的灵活性和扩展性。</li>
+<li>与 Java 动态编译相结合，可以实现无比强大的功能。</li>
+<li>对于 Java 这种先编译再运行的语言，能够让我们很方便的创建灵活的代码，这些代码可以在运行时装配，无需在组件之间进行源代码的链接，更加容易实现面向对象。</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>反射会消耗一定的系统资源，因此，如果不需要动态地创建一个对象，那么就不需要用反射；</li>
+<li>反射调用方法时可以忽略权限检查，获取这个类的私有方法和属性，因此可能会破坏类的封装性而导致安全问题。</li>
+</ul>
+<h6 id="如何使用Java的反射"><a href="#如何使用Java的反射" class="headerlink" title="如何使用Java的反射?"></a>如何使用Java的反射?</h6><p>  通过一个全限类名创建一个对象<br>  Class.forName(“全限类名”); 例如：com.mysql.jdbc.Driver Driver类已经被加载到 jvm中，并且完成了类的初始化工作就行了<br>  类名.class; 获取Class&lt;？&gt; clz 对象<br>  对象.getClass();<br>  获取构造器对象，通过构造器new出一个对象<br>  Clazz.getConstructor([String.class]);<br>  Con.newInstance([参数]);<br>  通过class对象创建一个实例对象（就相当与new类名（）无参构造器)<br>  Cls.newInstance();<br>  通过class对象获得一个属性对象<br>  Field c&#x3D;cls.getFields()：获得某个类的所有的公共（public）的字段，包括父类中的字段。<br>  Field c&#x3D;cls.getDeclaredFields()：获得某个类的所有声明的字段，即包括public、private和proteced，但是不包括父类的声明字段<br>  通过class对象获得一个方法对象<br>  Cls.getMethod(“方法名”,class……parameaType);（只能获取公共的）<br>  Cls.getDeclareMethod(“方法名”);（获取任意修饰的方法，不能执行私有）<br>  M.setAccessible(true);（让私有的方法可以执行）<br>  让方法执行<br>  1）. Method.invoke(obj实例对象,obj可变参数);—–（是有返回值的）</p>
+<p>  Java 序列化是为了保存各种对象在内存中的状态，并且可以把保存的对象状态再读出来。</p>
+<p>  以下情况需要使用 Java 序列化：</p>
+<p>  想把的内存中的对象状态保存到一个文件中或者数据库中时候；<br>  想用套接字在网络上传送对象的时候；<br>  想通过RMI（远程方法调用）传输对象的时候。</p>
+<h6 id="动态代理是什么？有哪些应用？-1"><a href="#动态代理是什么？有哪些应用？-1" class="headerlink" title="动态代理是什么？有哪些应用？"></a>动态代理是什么？有哪些应用？</h6><p>  动态代理是运行时动态生成代理类。</p>
+<p>  动态代理的应用有 spring aop、hibernate 数据查询、测试框架的后端 mock、rpc，Java注解对象获取等。</p>
+<h6 id="怎么实现动态代理？-1"><a href="#怎么实现动态代理？-1" class="headerlink" title="怎么实现动态代理？"></a>怎么实现动态代理？</h6><p>  JDK 原生动态代理和 cglib 动态代理。JDK 原生动态代理是基于接口实现的，而 cglib 是基于继承当前类的子类实现的。</p>
+<h3 id="深拷贝和浅拷贝区别是什么？"><a href="#深拷贝和浅拷贝区别是什么？" class="headerlink" title="深拷贝和浅拷贝区别是什么？"></a><strong>深拷贝和浅拷贝区别是什么？</strong></h3><ul>
+<li>浅克隆：当对象被复制时只复制它本身和其中包含的值类型的成员变量，而引用类型的成员对象并没有复制。</li>
+<li>深克隆：除了对象本身被复制外，对象所包含的所有成员变量也将复制。</li>
+</ul>
+<h6 id="什么叫对象序列化，什么是反序列化，实现对象序列化需要做哪些工作？"><a href="#什么叫对象序列化，什么是反序列化，实现对象序列化需要做哪些工作？" class="headerlink" title="什么叫对象序列化，什么是反序列化，实现对象序列化需要做哪些工作？"></a>什么叫对象序列化，什么是反序列化，实现对象序列化需要做哪些工作？</h6><p>  对象序列化，将对象中的数据编码为字节序列的过程。<br>  反序列化；将对象的编码字节重新反向解码为对象的过程。<br>  JAVA提供了API实现了对象的序列化和反序列化的功能，使用这些API时需要遵守如下约定：<br>  被序列化的对象类型需要实现序列化接口，此接口是标志接口，没有声明任何的抽象方法，JAVA编译器识别这个接口，自动的为这个类添加序列化和反序列化方法。<br>  为了保持序列化过程的稳定，建议在类中添加序列化版本号。<br>  不想让字段放在硬盘上就加transient<br>  以下情况需要使用 Java 序列化：<br>  想把的内存中的对象状态保存到一个文件中或者数据库中时候；<br>  想用套接字在网络上传送对象的时候；<br>  想通过RMI（远程方法调用）传输对象的时候。</p>
+<h4 id="序列化的作用"><a href="#序列化的作用" class="headerlink" title="序列化的作用"></a>序列化的作用</h4><p>序列化就是把java对象转化成一种格式的过程，把java对象序列化，变成一种可以存储的形式。</p>
+<p>1：对象随着程序的运行而被创建，然后在不可达时被回收，生命周期是短暂的。但是如果我们想长久地把对象的内容保存起来怎么办呢？把它转化为字节序列<strong>保存在存储介质上</strong>即可。那就需要序列化。</p>
+<p>　　　　2：所有可在<strong>网络上传输</strong>的对象都必须是可序列化的，比如RMI（remote method invoke,即远程方法调用），传入的参数或返回的对象都是可序列化的，否则会出错；所有需要保存到磁盘的java对象都必须是可序列化的。通常建议：程序创建的每个JavaBean类都实现Serializeable接口</p>
+<p> 　　　3：<strong>进程间传递对象</strong>，Android是基于Linux系统，不同进程之间的java对象是无法传输，所以我们此处要对对象进行序列化，从而实现对象在 <strong>应用程序进程 和 ActivityManagerService进程</strong> 之间传输。</p>
+<h4 id="序列化的缺点："><a href="#序列化的缺点：" class="headerlink" title="序列化的缺点："></a>序列化的缺点：</h4><h5 id="1-无法跨语言"><a href="#1-无法跨语言" class="headerlink" title="1.无法跨语言"></a>1.无法跨语言</h5><h5 id="2-易被攻击"><a href="#2-易被攻击" class="headerlink" title="2.易被攻击"></a>2.易被攻击</h5><h5 id="3-序列化后的流太大，影响系统的吞吐量"><a href="#3-序列化后的流太大，影响系统的吞吐量" class="headerlink" title="3.序列化后的流太大，影响系统的吞吐量"></a>3.序列化后的流太大，影响系统的吞吐量</h5><h5 id="4-序列化性能太差"><a href="#4-序列化性能太差" class="headerlink" title="4.序列化性能太差"></a>4.序列化性能太差</h5><h4 id="避免序列化的方法："><a href="#避免序列化的方法：" class="headerlink" title="避免序列化的方法："></a>避免序列化的方法：</h4><p>重写readObject()方法实现</p>
+<p>替换Java序列化  FastJson、Kryo、Protobuf、Hessian </p>
+<p>所以有一系列的规范来最大化避免：　</p>
+<p>　　　　 　　1）对序列化对象执行<strong>完整性检查或加密</strong>，以防止恶意对象创建或数据篡改；最常见的例子之一就是JWT:JWT由3部分组成：Header，Payload，Verify Signature，最后的签名部分其实就是对数据进行完整性校验的关键部分，用secret对数据部分进行哈希计算，随后检查计算出来的哈希值是否和请求中的JWT签名部分的哈希值相同。若两者一致则认为数据完整性没有被破坏，若两者有差异则说明数据被修改过。</p>
+<p>　　　　　　2）在创建对象之前强制执行严格的类型约束；</p>
+<p>　　　　　　3）隔离反序列化的代码，使其在非常低的特权环境中运行；</p>
+<p>　　　　　　4）记录反序列化的例外情况和失败信息，如：传入的类型不是预期的类型，或者反序列处理引发的例外情况；</p>
+<p>　　　　　　5）限制或监视来自于容器或服务器传入和传出的反序列化网络连接；</p>
+<p>　　　　　　6）监视反序列化，当用户持续进行反序列化时，对用户进行警告。</p>
+<p>　　</p>
+<p>目前JAVA常用的序列化有protobuf，json，xml，Serializable，hessian，kryo。</p>
+<p>　　protobuf：谷歌公司出的一款开源项目，转码性能高，支持多语言;</p>
+<p>　　JSON：用途最广泛，序列化方式还衍生了阿里的fastjson，美团的MSON，谷歌的GSON等更加优秀的转码工具。<br>　　　　　　优点：使用方便。<br>　　　　　　缺点：数据冗长，转码性能一般。</p>
+<h4 id="方法的类型："><a href="#方法的类型：" class="headerlink" title="方法的类型："></a>方法的类型：</h4><p>普通方法 静态方法 抽象方法 私有方法 构造方法</p>
+<h4 id="Lambda表达式："><a href="#Lambda表达式：" class="headerlink" title="Lambda表达式："></a>Lambda表达式：</h4><h5 id="语法："><a href="#语法：" class="headerlink" title="语法："></a>语法：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(parameters) -&gt; expression</span><br><span class="line"></span><br><span class="line"><span class="comment">//或</span></span><br><span class="line"></span><br><span class="line">(parameters) -&gt; &#123; statements; &#125;</span><br></pre></td></tr></table></figure>
+
+<p>Lambda表达式由三部分组成：</p>
+<p>1、paramaters：类似方法中的形参列表，这里的参数是函数式接口里的参数。这里的参数类型可以明确的声明也可不声明而由JVM隐含的推断，另外当只有一个推断类型时可以省略掉圆括号。</p>
+<p>2、-&gt;：可理解为“被用于”的意思</p>
+<p>3、方法体：可以是表达式也可以代码块，是函数式接口里方法的实现。代码块可返回一个值或者什么都不返回，这里的代码块块等同于方法的方法体。如果是表达式，也可以返回一个值或者什么都不反回。</p>
+<h2 id="1-面向过程"><a href="#1-面向过程" class="headerlink" title="1. 面向过程"></a>1. 面向过程</h2><p>面向过程是一种以事件为中心的编程思想，编程的时候把解决问题的步骤分析出来，然后用函数把这些步骤实现，在一步一步的具体步骤中再按顺序调用函数。</p>
+<p><strong>优点：</strong></p>
+<p>流程化使得编程任务明确，在开发之前基本考虑了实现方式和最终结果，具体步骤清楚，便于节点分析。</p>
+<p>效率高，面向过程强调代码的短小精悍，善于结合数据结构来开发高效率的程序。</p>
+<p><strong>缺点：</strong></p>
+<p>需要深入的思考，耗费精力，代码重用性低，扩展能力差，后期维护难度比较大。</p>
+<h2 id="2-面向对象"><a href="#2-面向对象" class="headerlink" title="2. 面向对象"></a>2. 面向对象</h2><p>在日常生活或编程中，简单的问题可以用面向过程的思路来解决，直接有效，但是当问题的规模变得更大时，用面向过程的思想是远远不够的。所以慢慢就出现了面向对象的编程思想。世界上有很多人和事物，每一个都可以看做一个对象，而每个对象都有自己的属性和行为，对象与对象之间通过方法来交互。面向对象是一种以“对象”为中心的编程思想，把要解决的问题分解成各个对象，建立对象的目的不是为了完成一个步骤，而是为了描叙某个对象在整个解决问题的步骤中的属性和行为。</p>
+<p><strong>优点:</strong></p>
+<p>结构清晰，程序是模块化和结构化，更加符合人类的思维方式；</p>
+<p>易扩展，代码重用率高，可继承，可覆盖，可以设计出低耦合的系统；</p>
+<p>易维护，系统低耦合的特点有利于减少程序的后期维护工作量。</p>
+<p><strong>缺点：</strong></p>
+<p>开销大，当要修改对象内部时，对象的属性不允许外部直接存取，所以要增加许多没有其他意义、只负责读或写的行为。这会为编程工作增加负担，增加运行开销，并且使程序显得臃肿。</p>
+<p>性能低，由于面向更高的逻辑抽象层，使得面向对象在实现的时候，不得不做出性能上面的牺牲，计算时间和空间存储大小都开销很大。</p>
+<p><strong>Stream</strong></p>
+<p>stream不存储数据，而是按照特定的规则对数据进行计算，一般会输出结果；<br>stream不会改变数据源，通常情况下会产生一个新的集合；<br>stream具有延迟执行特性，只有调用终端操作时，中间操作才会执行。<br>对stream操作分为终端操作和中间操作，那么这两者分别代表什么呢？<br>终端操作：会消费流，这种操作会产生一个结果的，如果一个流被消费过了，那它就不能被重用的。<br>中间操作：中间操作会产生另一个流。因此中间操作可以用来创建执行一系列动作的管道。一个特别需要注意的点是:中间操作不是立即发生的。相反，当在中间操作创建的新流上执行完终端操作后，中间操作指定的操作才会发生。所以中间操作是延迟发生的，中间操作的延迟行为主要是让流API能够更加高效地执行。<br>stream不可复用，对一个已经进行过终端操作的流再次调用，会抛出异常。</p>
+<p><strong>Date</strong></p>
+<p>在 <a target="_blank" rel="noopener" href="http://c.biancheng.net/java/">Java</a> 中获取当前时间，可以使用 java.util.Date 类和 java.util.Calendar 类完成。其中，Date 类主要封装了系统的日期和时间的信息，Calendar 类则会根据系统的日历来解释 Date 对象。</p>
+<p>Date 类表示系统特定的时间戳，可以精确到毫秒。Date 对象表示时间的默认顺序是星期、月、日、小时、分、秒、年。</p>
+<p><strong>JDK JRE JVM</strong></p>
+<p>摘要：JDK是 Java 语言的软件开发工具包(SDK)。在JDK的安装目录下有一个jre目录，里面有两个文件夹bin和lib，在这里可以认为bin里的就是jvm，lib中则是jvm工作所需要的类库，而jvm和 lib合起来就称为jre。</p>
+<p>一、JDK<br>JDK(Java Development Kit) 是整个JAVA的核心，包括了Java运行环境（Java Runtime Envirnment），一堆Java工具（javac&#x2F;java&#x2F;jdb等）和Java基础的类库（即Java API 包括rt.jar）。<br>JDK是java开发工具包，基本上每个学java的人都会先在机器 上装一个JDK，那他都包含哪几部分呢？在目录下面有 六个文件夹、一个src类库源码压缩包、和其他几个声明文件。其中，真正在运行java时起作用的 是以下四个文件夹：bin、include、lib、 jre。有这样一个关系，JDK包含JRE，而JRE包 含JVM。</p>
+<pre><code>  bin:最主要的是编译器(javac.exe)
+  include:java和JVM交互用的头文件
+  lib：类库
+  jre:java运行环境
+</code></pre>
+<p>（注意：这里的bin、lib文件夹和jre里的bin、lib是 不同的）</p>
+<p>总的来说JDK是用于java程序的开发,而jre则是只能运行class而没有编译的功能。</p>
+<p>二、JRE</p>
+<p>JRE（Java Runtime Environment，Java运行环境），包含JVM标准实现及Java核心类库。JRE是Java运行环境，并不是一个开发环境，所以没有包含任何开发工具（如编译器和调试器）<br>JRE是指java运行环境。光有JVM还不能成class的 执行，因为在解释class的时候JVM需要调用解释所需要的类库lib。 （jre里有运行.class的java.exe）<br>JRE （ Java Runtime Environment ），是运行 Java 程序必不可少的（除非用其他一些编译环境编译成.exe可执行文件……），JRE的 地位就象一台PC机一样，我们写好的Win64应用程序需要操作系统帮 我们运行，同样的，我们编写的Java程序也必须要JRE才能运行。</p>
+<p>三、JVM</p>
+<p>JVM（Java Virtual Machine），即java虚拟机, java运行时的环境，JVM是一种用于计算设备的规范，它是一个虚构出来的计算机，是通过在实际的计算机上仿真模拟各种计算机功能来实现的。针对java用户，也就是拥有可运行的.class文件包（jar或者war）的用户。里面主要包含了jvm和java运行时基本类库（rt.jar）。rt.jar可以简单粗暴地理解为：它就是java源码编译成的jar包。Java虚拟机在执行字节码时，把字节码解释成具体平台上的机器指令执行。这就是Java的能够“一次编译，到处运行”的原因。</p>
+<p>四、JDK、JRE、JVM三者的联系与区别</p>
+<p>1.三者联系：<br>JVM不能单独搞定class的执行，解释class的时候JVM需要调用解释所需要的类库lib。在JDK下面的的jre目录里面有两个文件夹bin和lib,在这里可以认为bin里的就是jvm，lib中则是jvm工作所需要的类库，而jvm和 lib和起来就称为jre。JVM+Lib&#x3D;JRE。总体来说就是，我们利用JDK（调用JAVA API）开发了属于我们自己的JAVA程序后，通过JDK中的编译程序（javac）将我们的文本java文件编译成JAVA字节码，在JRE上运行这些JAVA字节码，JVM解析这些字节码，映射到CPU指令集或OS的系统调用。</p>
+<p>2.三者区别：<br>a.JDK和JRE区别：在bin文件夹下会发现，JDK有javac.exe而JRE里面没有，javac指令是用来将java文件编译成class文件的，这是开发者需要的，而用户（只需要运行的人）是不需要的。JDK还有jar.exe, javadoc.exe等等用于开发的可执行指令文件。这也证实了一个是开发环境，一个是运行环境。<br>b.JRE和JVM区别：JVM并不代表就可以执行class了，JVM执行.class还需要JRE下的lib类库的支持，尤其是rt.jar。</p>
+<p><strong>字节流和字符流</strong></p>
+<p>字节流操作的基本单元是字节；字符流操作的基本单元为Unicode码元。</p>
+<p>字节流在操作的时候本身不会用到缓冲区的，是与文件本身直接操作的；而字符流在操作的时候使用到缓冲区的。</p>
+<p>所有文件的存储都是字节(byte)的存储，在磁盘上保留的是字节。</p>
+<p>在使用字节流操作中，即使没有关闭资源（close方法），也能输出；而字符流不使用close方法的话，不会输出任何内容</p>
+<h1 id="对象实体和对象引用的区别"><a href="#对象实体和对象引用的区别" class="headerlink" title="对象实体和对象引用的区别"></a><strong>对象实体和对象引用的区别</strong></h1><p>基本数据类型可以在栈中直接分配内存；但引用数据类型是对象引用在栈内存中，对象实体在堆内存中。</p>
+<p>xxxxxxxxxx public synchronized E set(int index, E element) {        if (index &gt;&#x3D; elementCount)            throw new ArrayIndexOutOfBoundsException(index);​        E oldValue &#x3D; elementData(index);        elementData[index] &#x3D; element;        return oldValue;    }java</p>
+<p>Object obj &#x3D; new Object();</p>
+<p>简单的一句话，包含了三个动作：</p>
+<ul>
+<li>Object obj 在栈内存中创建了一个名为 obj 的 Object 类型引用变量，它可以指向 Object 类型的对象实体；</li>
+<li>new Object() 在堆内存中创建了一个 Object 类型对象实体；</li>
+<li>最后用一个“&#x3D;”将对象引用 obj 指向对象实体 new Object()。</li>
+</ul>
+<p>对象引用就是一个变量，有名字，我们可以直接访问，它存储的是一个地址，这个地址指向堆内存中某一个该类型的对象实体；</p>
+<p>而对象实体没有名字，我们只能通过对象引用来间接访问它。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">GodHandl</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/07/22/Java%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93/">http://example.com/2023/07/22/Java%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">GodHandl</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/java/">java</a></div><div class="post_share"><div class="social-share" data-image="/img/6.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/08/01/WebSocket%E6%95%B4%E5%90%88%E7%9B%B4%E6%92%AD/" title="WebSocket整合直播"><img class="cover" src="/img/23.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">WebSocket整合直播</div></div></a></div><div class="next-post pull-right"><a href="/2023/07/21/JVM%E4%B9%8B%E6%96%B9%E6%B3%95%E7%9A%84%E8%B0%83%E7%94%A8/" title="JVM之方法的调用"><img class="cover" src="/img/2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">JVM之方法的调用</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">GodHandl</div><div class="author-info__description">我心无窍，天道酬勤</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/GodHandl" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:1121968264@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%87%E8%AF%86%E7%AC%A6%E5%92%8C%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">标识符和关键字的区别：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%E7%B1%BB%E5%9E%8B%E6%93%A6%E9%99%A4%EF%BC%9A"><span class="toc-number">2.</span> <span class="toc-text">泛型类型擦除：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Java%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%B0%81%E8%A3%85%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="toc-number">3.</span> <span class="toc-text">Java基本数据类型与封装类的区别：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E7%9A%84%E7%89%B9%E6%AE%8A%E6%80%A7%EF%BC%9A"><span class="toc-number">3.1.</span> <span class="toc-text">静态方法的特殊性：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E5%92%8C%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="toc-number">4.</span> <span class="toc-text">成员变量和局部变量的区别：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AF%B4-Java-%E8%AF%AD%E8%A8%80%E2%80%9C%E7%BC%96%E8%AF%91%E4%B8%8E%E8%A7%A3%E9%87%8A%E5%B9%B6%E5%AD%98%E2%80%9D%EF%BC%9F"><span class="toc-number"></span> <span class="toc-text">为什么说 Java 语言“编译与解释并存”？</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%EF%BC%9A"><span class="toc-number">0.1.</span> <span class="toc-text">面向对象：</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%EF%BC%9A"><span class="toc-number">0.1.1.</span> <span class="toc-text">三大特性：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E7%9A%84%E4%BD%9C%E7%94%A8%E5%92%8C%E7%89%B9%E7%82%B9%EF%BC%9A"><span class="toc-number">0.1.2.</span> <span class="toc-text">构造方法的作用和特点：</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%8D%E5%B0%84%EF%BC%9A"><span class="toc-number">0.2.</span> <span class="toc-text">反射：</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%8D%E5%B0%84%EF%BC%9F"><span class="toc-number">0.2.1.</span> <span class="toc-text">什么是反射？</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%93%AA%E9%87%8C%E7%94%A8%E5%88%B0%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6%EF%BC%9F"><span class="toc-number">0.2.2.</span> <span class="toc-text">哪里用到反射机制？</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9%EF%BC%9F"><span class="toc-number">0.2.3.</span> <span class="toc-text">反射机制的优缺点？</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E6%9C%89%E5%93%AA%E4%BA%9B%E5%BA%94%E7%94%A8%EF%BC%9F"><span class="toc-number">0.2.4.</span> <span class="toc-text">动态代理是什么？有哪些应用？</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%80%8E%E4%B9%88%E5%AE%9E%E7%8E%B0%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86%EF%BC%9F"><span class="toc-number">0.2.5.</span> <span class="toc-text">怎么实现动态代理？</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Java%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">0.2.6.</span> <span class="toc-text">Java反射机制的作用</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Java-%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="toc-number">1.</span> <span class="toc-text">Java 反射机制的优缺点</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Java%E7%9A%84%E5%8F%8D%E5%B0%84"><span class="toc-number">1.0.1.</span> <span class="toc-text">如何使用Java的反射?</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E6%9C%89%E5%93%AA%E4%BA%9B%E5%BA%94%E7%94%A8%EF%BC%9F-1"><span class="toc-number">1.0.2.</span> <span class="toc-text">动态代理是什么？有哪些应用？</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%80%8E%E4%B9%88%E5%AE%9E%E7%8E%B0%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86%EF%BC%9F-1"><span class="toc-number">1.0.3.</span> <span class="toc-text">怎么实现动态代理？</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number"></span> <span class="toc-text">深拷贝和浅拷贝区别是什么？</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E5%8F%AB%E5%AF%B9%E8%B1%A1%E5%BA%8F%E5%88%97%E5%8C%96%EF%BC%8C%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%EF%BC%8C%E5%AE%9E%E7%8E%B0%E5%AF%B9%E8%B1%A1%E5%BA%8F%E5%88%97%E5%8C%96%E9%9C%80%E8%A6%81%E5%81%9A%E5%93%AA%E4%BA%9B%E5%B7%A5%E4%BD%9C%EF%BC%9F"><span class="toc-number">0.0.1.</span> <span class="toc-text">什么叫对象序列化，什么是反序列化，实现对象序列化需要做哪些工作？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">序列化的作用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E7%BC%BA%E7%82%B9%EF%BC%9A"><span class="toc-number">2.</span> <span class="toc-text">序列化的缺点：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E6%97%A0%E6%B3%95%E8%B7%A8%E8%AF%AD%E8%A8%80"><span class="toc-number">2.1.</span> <span class="toc-text">1.无法跨语言</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E6%98%93%E8%A2%AB%E6%94%BB%E5%87%BB"><span class="toc-number">2.2.</span> <span class="toc-text">2.易被攻击</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E5%BA%8F%E5%88%97%E5%8C%96%E5%90%8E%E7%9A%84%E6%B5%81%E5%A4%AA%E5%A4%A7%EF%BC%8C%E5%BD%B1%E5%93%8D%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%90%9E%E5%90%90%E9%87%8F"><span class="toc-number">2.3.</span> <span class="toc-text">3.序列化后的流太大，影响系统的吞吐量</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E5%BA%8F%E5%88%97%E5%8C%96%E6%80%A7%E8%83%BD%E5%A4%AA%E5%B7%AE"><span class="toc-number">2.4.</span> <span class="toc-text">4.序列化性能太差</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%81%BF%E5%85%8D%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-number">3.</span> <span class="toc-text">避免序列化的方法：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E7%9A%84%E7%B1%BB%E5%9E%8B%EF%BC%9A"><span class="toc-number">4.</span> <span class="toc-text">方法的类型：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%9A"><span class="toc-number">5.</span> <span class="toc-text">Lambda表达式：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%EF%BC%9A"><span class="toc-number">5.1.</span> <span class="toc-text">语法：</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B"><span class="toc-number"></span> <span class="toc-text">1. 面向过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="toc-number"></span> <span class="toc-text">2. 面向对象</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E5%AE%9E%E4%BD%93%E5%92%8C%E5%AF%B9%E8%B1%A1%E5%BC%95%E7%94%A8%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number"></span> <span class="toc-text">对象实体和对象引用的区别</span></a></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/08/07/hello-world/" title="Hello World"><img src="/img/7.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2023/08/07/hello-world/" title="Hello World">Hello World</a><time datetime="2023-08-07T07:14:53.152Z" title="发表于 2023-08-07 15:14:53">2023-08-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/01/WebSocket%E6%95%B4%E5%90%88%E7%9B%B4%E6%92%AD/" title="WebSocket整合直播"><img src="/img/23.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="WebSocket整合直播"/></a><div class="content"><a class="title" href="/2023/08/01/WebSocket%E6%95%B4%E5%90%88%E7%9B%B4%E6%92%AD/" title="WebSocket整合直播">WebSocket整合直播</a><time datetime="2023-08-01T12:04:36.000Z" title="发表于 2023-08-01 20:04:36">2023-08-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/07/22/Java%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93/" title="Java基础总结"><img src="/img/6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java基础总结"/></a><div class="content"><a class="title" href="/2023/07/22/Java%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93/" title="Java基础总结">Java基础总结</a><time datetime="2023-07-22T12:04:36.000Z" title="发表于 2023-07-22 20:04:36">2023-07-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/07/21/JVM%E4%B9%8B%E6%96%B9%E6%B3%95%E7%9A%84%E8%B0%83%E7%94%A8/" title="JVM之方法的调用"><img src="/img/2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JVM之方法的调用"/></a><div class="content"><a class="title" href="/2023/07/21/JVM%E4%B9%8B%E6%96%B9%E6%B3%95%E7%9A%84%E8%B0%83%E7%94%A8/" title="JVM之方法的调用">JVM之方法的调用</a><time datetime="2023-07-21T12:04:36.000Z" title="发表于 2023-07-21 20:04:36">2023-07-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/07/21/JVM%E5%AD%A6%E4%B9%A0/" title="JVM学习"><img src="/img/16.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JVM学习"/></a><div class="content"><a class="title" href="/2023/07/21/JVM%E5%AD%A6%E4%B9%A0/" title="JVM学习">JVM学习</a><time datetime="2023-07-21T12:04:36.000Z" title="发表于 2023-07-21 20:04:36">2023-07-21</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By GodHandl</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/#/Integrated/index">豫ICP备2023002536号-1</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  function abcjsInit() {
+    function abcjsFn() {
+      for (let abcContainer of document.getElementsByClassName("abc-music-sheet")) {
+        ABCJS.renderAbc(abcContainer, abcContainer.innerHTML, {responsive: 'resize'})
+      }
+    }
+    
+    typeof ABCJS === 'object' ? abcjsFn()
+      : getScript('https://cdn.jsdelivr.net/npm/abcjs/dist/abcjs-basic-min.min.js').then(abcjsFn)
+  }
+
+  window.pjax ? abcjsInit() : document.addEventListener('DOMContentLoaded', abcjsInit)
+})()</script></div><div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div><script>const notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));</script><script async type="text/javascript" src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@latest/source/js/snow.min.js"></script><script type="text/javascript" color="25,25,112" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

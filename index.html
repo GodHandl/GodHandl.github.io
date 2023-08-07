@@ -1,196 +1,352 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>GodHandl - 灵台清悠，心无罣碍，意无所执，解心释神</title><meta name="author" content="GodHandl"><meta name="copyright" content="GodHandl"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="我心无窍，天道酬勤">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GodHandl">
 <meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="og:site_name" content="GodHandl">
+<meta property="og:description" content="我心无窍，天道酬勤">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/avatar.jpg">
+<meta property="article:author" content="GodHandl">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+<meta name="twitter:image" content="http://example.com/img/avatar.jpg"><link rel="shortcut icon" href="/img/favicon1.png"><link rel="canonical" href="http://example.com/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'GodHandl',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-08-07 16:11:08'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-<meta name="generator" content="Hexo 5.4.2"></head>
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2023/08/07/hello-world/" class="article-date">
-  <time datetime="2023-08-07T03:40:11.657Z" itemprop="datePublished">2023-08-07</time>
-</a>
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/08/07/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/my.css"><meta name="generator" content="Hexo 5.4.2"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+  preloader.initLoading()
+  window.addEventListener('load',() => { preloader.endLoading() })
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+  if (false) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+  }
+})()</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 目录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/img/index.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="GodHandl"><span class="site-name">GodHandl</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 目录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">GodHandl</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/GodHandl" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:1121968264@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2023/08/07/hello-world/" title="Hello World"><img class="post-bg" src="/img/7.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/07/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-07T07:14:53.152Z" title="发表于 2023-08-07 15:14:53">2023-08-07</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+More info: Writing
+Run server1$ hexo server
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+More info: Server
+Generate static files1$ hexo generate
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/08/07/hello-world/" data-id="cll0brvxc0000v4vdasc46oul" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
+More info: Generating
+Deploy to remote sites1$ hexo deploy
 
+More info: Deployment
+</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/08/01/WebSocket%E6%95%B4%E5%90%88%E7%9B%B4%E6%92%AD/" title="WebSocket整合直播"><img class="post-bg" src="/img/23.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="WebSocket整合直播"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/01/WebSocket%E6%95%B4%E5%90%88%E7%9B%B4%E6%92%AD/" title="WebSocket整合直播">WebSocket整合直播</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-01T12:04:36.000Z" title="发表于 2023-08-01 20:04:36">2023-08-01</time></span></div><div class="content">由于浏览器不支持对于rtmp协议推拉流，所以需要后台对传输的数据进行处理，将数据转接，为了实现其实时性，使用websocket将数据传输
+先使用obs和vlc测试正常的推拉流是否正常
+然后在跑本地后台传输视频
+使用JavaCV技术传输音视频
+123456789101112131415161718192021//创建+设置采集器FFmpegFrameGrabber grabber = FFmpegFrameGrabber.createDefault(inputPath);grabber.setOption(&quot;rtsp_transport&quot;, &quot;tcp&quot;);grabber.setImageWidth(960);grabber.setImageHeight(540);//开启采集器grabber.start();//直播播放窗口CanvasFrame canvasFrame = new CanvasFrame(&quot;直播------来自&quot;+inputPath);canvasFrame.setDefaultCloseOperation(J ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/07/22/Java%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93/" title="Java基础总结"><img class="post-bg" src="/img/6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java基础总结"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/07/22/Java%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93/" title="Java基础总结">Java基础总结</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-22T12:04:36.000Z" title="发表于 2023-07-22 20:04:36">2023-07-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span></div><div class="content">标识符和关键字的区别：标识符用来命名常量、变量、类和类的对象等。 因此，一个良好的编程习惯要求命名标识符时，应赋予它一个有意义或有用途的名字。 关键字（或者保留字）是对编译器有特殊意义的固定单词，不能在程序中做其他目的使用。
+一、主体不同
+关键字属于保留字，是整个语言范围内预先保留的标识符。一般标识符是用户编程时使用的名字，用于给变量、常量、函数、语句块等命名，以建立起名称与使用之间的关系。
+二、特点不同
+关键字不能声明与关键字同名的标识符。一般标识符由字母和数字以及其它字符构成。
+三、规则不同
+关键字经过预处理后，关键字从预处理记号(preprocessing-token)中区别出来，剩下的标识符作为记号(token)，用于声明对象、函数、类型、命名空间等。一般标识符长度是由机器上的编译系统决定的，一般的限制为8字符。
+泛型类型擦除：Java的泛型是伪泛型，因为Java在编译期间泛型的信息会被擦除掉，Java的泛型是在编译器这个层次实现的，在生成字节码中不包含泛型中的类型信息，使用泛型的时候加上类型参数，在编译期会去掉，这个过程就是类型擦除
+例如在反射中调用List时能添加Strin ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/07/21/JVM%E4%B9%8B%E6%96%B9%E6%B3%95%E7%9A%84%E8%B0%83%E7%94%A8/" title="JVM之方法的调用"><img class="post-bg" src="/img/2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JVM之方法的调用"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/07/21/JVM%E4%B9%8B%E6%96%B9%E6%B3%95%E7%9A%84%E8%B0%83%E7%94%A8/" title="JVM之方法的调用">JVM之方法的调用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-21T12:04:36.000Z" title="发表于 2023-07-21 20:04:36">2023-07-21</time></span></div><div class="content">[TOC]
+JVM的静态绑定和动态绑定在JVM中，将符号引用转换为调用方法的直接引用与方法的绑定机制相关
+静态链接：当一个字节码文件被装载进JVM内部时，如果被调用的目标方法在编译期确定，且运行期保持不变时，这种情况下将调用方法的符号引用转换为直接引用的过程称之为静态链接
+动态链接：如果被调用的方法在编译期无法被确定下来，也就是说，只能够在程序运行期将调用的方法的符号转换为直接引用，由于这种引用转换过程具备动态性，因此也被称之为动态链接。
+方法的绑定机制静态链接和动态链接对应的方法的绑定机制为：早期绑定（Early Binding）和晚期绑定（Late Binding）。绑定是一个字段、方法或者类在符号引用被替换为直接引用的过程，这仅仅发生一次。
+早期绑定早期绑定就是指被调用的目标方法如果在编译期可知，且运行期保持不变时，即可将这个方法与所属的类型进行绑定，这样一来，由于明确了被调用的目标方法究竟是哪一个，因此也就可以使用静态链接的方式将符号引用转换为直接引用。
+晚期绑定如果被调用的方法在编译期无法被确定下来，只能够在程序运行期根据实际的类型绑定相关的方法，这种绑定方式也就被称之为晚期 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/07/21/JVM%E5%AD%A6%E4%B9%A0/" title="JVM学习"><img class="post-bg" src="/img/16.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JVM学习"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/07/21/JVM%E5%AD%A6%E4%B9%A0/" title="JVM学习">JVM学习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-21T12:04:36.000Z" title="发表于 2023-07-21 20:04:36">2023-07-21</time></span></div><div class="content">Java语言的编写环境
+内存结构：
 
-  
+程序计数器（寄存器）作用：记住下一条jvm指令的执行地址
+特点：
 
+是线程私有的
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">August 2023</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2023/08/07/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2023 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+不会出现内存溢出
 
 
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+虚拟机栈虚拟机栈：是描述java方法执行的内存模型，每个方法在执行的同时都会创建一个栈帧（Stack Frame）用于存储局部变量表、操作数栈、动态链接、方法出口等信息。每一个方法从调用直至执行完成的过程，就对应着一个栈帧在虚拟机栈中入栈到出栈的过程。
 
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
+栈-线程与运行需要的内存空间（方法运行所需 要的栈帧）
 
+每个线程运行所需的内存称为虚拟机栈
 
+每个线程由多个栈帧组成，对应着每次方法调用时所占用的内存
 
-
-<script src="/js/script.js"></script>
-
+每个线程只有一个活动的栈帧，对应当前正在执行的那个方法
 
 
+垃圾回收是否设计栈内存？
+栈内存分配越大越好？
+方法的局部变量是否线程安全
+jvm指令
+2.2栈内存溢出：
+栈帧过多导致溢出
+栈帧过大导致溢出
 
-  </div>
-</body>
-</html>
+2.3线程运行诊断：cpu占用过多
+定位：
+
+用top定位那个进程对cpu占用过高
+ps H -eo pid,tid,%cpu | grep 进程id（用ps命令定位哪个线程引起的cpu占用过高）
+jstack 进程id
+可以根据线程id ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/07/21/JVM%E9%9D%A2%E8%AF%95/" title="JVM面试"><img class="post-bg" src="/img/9.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JVM面试"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/07/21/JVM%E9%9D%A2%E8%AF%95/" title="JVM面试">JVM面试</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-21T12:04:36.000Z" title="发表于 2023-07-21 20:04:36">2023-07-21</time></span></div><div class="content">[TOC]
+栈帧中存放的信息：存储局部变量 表、操作数栈、动态连接、方法出口等信息
+方法区存储着已被Java虚拟机加载的类型信息、常量、静态变量、即时编译器编译后的代码缓存等数据
+JDK7把永久代的字符串常量池、静态变量等移出
+描述为堆逻辑的一部分
+对象的创建过程
+判断对象对应的类是否加载、链接、初始化
+没有将执行类加载过程
+
+为对象分配内存
+
+指针碰撞（内存规整）
+所有被使用过的内存都被放在一边，空闲的内存被放在另一边，中间放着 一个指针作为分界点的指示器，那所分配内存就仅仅是把那个指针向空闲空间方向挪动 一段与对象大小相等的距离
+
+空闲列表（内存不规整）
+虚拟机就必须维护一个列表，记录上哪些内存块是可 用的，在分配的时候从列表中找到一块足够大的空间划分给对象实例，并更新列表上的 记录
+
+
+
+处理并发安全问题
+
+对分配内存空间的动作进行同步处理
+CAS加失败重试保证操作的原子性
+
+把分配的内存的动作按照线程划分在不同的空间中
+即每个 线程在 Java 堆中预先分配一小块内存，称为本地线程分配缓冲（Thread Local Allocation Buffer，TLAB）
+
+
+
+初始化分 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/07/21/Linux%E5%AD%A6%E4%B9%A0/" title="Linux学习"><img class="post-bg" src="/img/2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux学习"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/07/21/Linux%E5%AD%A6%E4%B9%A0/" title="Linux学习">Linux学习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-21T12:04:36.000Z" title="发表于 2023-07-21 20:04:36">2023-07-21</time></span></div><div class="content">SpringBoot部署项目按下列操作打包
+打包成jar包传输到服务器中当前目录下放开安全组中端口号配置Java环境123yum list java-1.8*  #检查yum中的java1.8包yum install java-1.8.0-openjdk* -y #开始安装java -version #验证安装
+
+在前台运行springboot项目1234java -jar xxx.jar         #使用项目中配置的端口java -jar xxx.jar --server.port=80 #指定运行端口键盘输入Ctrl+c             #终止运行
+
+在后台运行springboot项目1234java -jar xxx.jar &amp;ps aux | grep java     #获取程序pidkill pid               #通过kill pid停止对应程序
+
+如果想让项目在后台一直运行,通过如下命令启动JAR:
+nohup java -jar xxx.jar &gt; consoleMsg.log 2&gt;&amp;1 &amp;
+上面的2 和 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/07/21/Minio%E5%AD%A6%E4%B9%A0/" title="Minio学习"><img class="post-bg" src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Minio学习"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/07/21/Minio%E5%AD%A6%E4%B9%A0/" title="Minio学习">Minio学习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-21T12:04:36.000Z" title="发表于 2023-07-21 20:04:36">2023-07-21</time></span></div><div class="content">安装https://dl.minio.io/server/minio/release/linux-amd64/minio
+联网下载：
+wget https://dl.minio.io/server/minio/release/linux-amd64/minio
+安装wget
+yum -y install wget
+改权：
+chmod 777 -R minio
+后台运行：
+nohup &#x2F;usr&#x2F;local&#x2F;minio&#x2F;minio server  &#x2F;home&#x2F;file &gt; &#x2F;home&#x2F;file&#x2F;minio.log 2&gt;&amp;1 &amp;
+修改MINIO_ACCESS_KEY和MINIO_SECRET_KEYexport MINIO_ACCESS_KEY&#x3D;fileadmin
+export MINIO_SECRET_KEY&#x3D;fileadmin
+指定端口启动.&#x2F;minio server &#x2F;home –console-address :9002 –ad ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/07/21/Mysql%E9%AB%98%E7%BA%A7/" title="Mysql高级"><img class="post-bg" src="/img/25.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Mysql高级"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/07/21/Mysql%E9%AB%98%E7%BA%A7/" title="Mysql高级">Mysql高级</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-21T12:04:36.000Z" title="发表于 2023-07-21 20:04:36">2023-07-21</time></span></div><div class="content">索引索引及其作用
+聚簇索引聚簇索引（Clustered Index）一般指的是主键索引（如果存在主键索引的话），聚簇索引也被称之为聚集索引。
+聚簇索引在 InnoDB 中是使用 B+ 树实现的
+在聚簇索引的叶子节点直接存储用户信息的内存地址，我们使用内存地址可以直接找到相应的行数据。
+非聚簇索引（有时也称辅助索引或二级索引）非聚簇索引在 InnoDB 引擎中，也叫二级索引在非聚簇索引的叶子节点上存储的并不是真正的行数据，而是主键 ID，所以当我们使用非聚簇索引进行查询时，首先会得到一个主键 ID，然后再使用主键 ID 去聚簇索引上找到真正的行数据，我们把这个过程称之为回表查询。
+总结在 MySQL 的 InnoDB 引擎中，每个索引都会对应一颗 B+ 树，而聚簇索引和非聚簇索引最大的区别在于叶子节点存储的数据不同，聚簇索引叶子节点存储的是行数据，因此通过聚簇索引可以直接找到真正的行数据；而非聚簇索引叶子节点存储的是主键信息，所以使用非聚簇索引还需要回表查询，因此我们可以得出聚簇索引和非聚簇索引的区别主要有以下几个：
+
+聚簇索引叶子节点存储的是行数据；而非聚簇索引叶子节点存储的是聚簇索引 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/07/21/Spring%E6%BA%90%E7%A0%81/" title="Spring源码"><img class="post-bg" src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Spring源码"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/07/21/Spring%E6%BA%90%E7%A0%81/" title="Spring源码">Spring源码</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-21T12:04:36.000Z" title="发表于 2023-07-21 20:04:36">2023-07-21</time></span></div><div class="content">Spring框架
+IOC
+（1）控制反转，把对象创建和对象之间的调用过程，交给Spring进行管理
+（2）使用IOC目的：为了耦合度变低
+IOC底层原理
+（1）xml解析、工厂模式、反射
+</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">GodHandl</div><div class="author-info__description">我心无窍，天道酬勤</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/GodHandl" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:1121968264@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/08/07/hello-world/" title="Hello World"><img src="/img/7.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2023/08/07/hello-world/" title="Hello World">Hello World</a><time datetime="2023-08-07T07:14:53.152Z" title="发表于 2023-08-07 15:14:53">2023-08-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/01/WebSocket%E6%95%B4%E5%90%88%E7%9B%B4%E6%92%AD/" title="WebSocket整合直播"><img src="/img/23.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="WebSocket整合直播"/></a><div class="content"><a class="title" href="/2023/08/01/WebSocket%E6%95%B4%E5%90%88%E7%9B%B4%E6%92%AD/" title="WebSocket整合直播">WebSocket整合直播</a><time datetime="2023-08-01T12:04:36.000Z" title="发表于 2023-08-01 20:04:36">2023-08-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/07/22/Java%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93/" title="Java基础总结"><img src="/img/6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java基础总结"/></a><div class="content"><a class="title" href="/2023/07/22/Java%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93/" title="Java基础总结">Java基础总结</a><time datetime="2023-07-22T12:04:36.000Z" title="发表于 2023-07-22 20:04:36">2023-07-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/07/21/JVM%E4%B9%8B%E6%96%B9%E6%B3%95%E7%9A%84%E8%B0%83%E7%94%A8/" title="JVM之方法的调用"><img src="/img/2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JVM之方法的调用"/></a><div class="content"><a class="title" href="/2023/07/21/JVM%E4%B9%8B%E6%96%B9%E6%B3%95%E7%9A%84%E8%B0%83%E7%94%A8/" title="JVM之方法的调用">JVM之方法的调用</a><time datetime="2023-07-21T12:04:36.000Z" title="发表于 2023-07-21 20:04:36">2023-07-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/07/21/JVM%E5%AD%A6%E4%B9%A0/" title="JVM学习"><img src="/img/16.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JVM学习"/></a><div class="content"><a class="title" href="/2023/07/21/JVM%E5%AD%A6%E4%B9%A0/" title="JVM学习">JVM学习</a><time datetime="2023-07-21T12:04:36.000Z" title="发表于 2023-07-21 20:04:36">2023-07-21</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Java/"><span class="card-category-list-name">Java</span><span class="card-category-list-count">1</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/java/" style="font-size: 1.1em; color: #999">java</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><span class="card-archive-list-count">17</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">19</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-08-07T08:11:08.102Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By GodHandl</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/#/Integrated/index">豫ICP备2023002536号-1</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: (str) => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: (subtitleType) => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  }
+}
+</script><script>function subtitleType () {
+  if (true) {
+    typedJSFn.init(["灵台清悠，心无罣碍，意无所执，解心释神"])
+  } else {
+    document.getElementById("subtitle").textContent = "灵台清悠，心无罣碍，意无所执，解心释神"
+  }
+}
+typedJSFn.run(subtitleType)</script></div><div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div><script>const notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));</script><script async type="text/javascript" src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@latest/source/js/snow.min.js"></script><script type="text/javascript" color="25,25,112" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
